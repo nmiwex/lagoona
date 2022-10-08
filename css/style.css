@@ -271,6 +271,7 @@ p {
 }
 
 .section-offers__content-link {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
@@ -280,13 +281,20 @@ p {
   color: var(--F0BF5F);
 }
 
-.content-link__svg {
+.content-link__more {
+  position: relative;
+}
+
+.content-link__more::after {
+  position: absolute;
+  bottom: -5px;
   margin-left: 5px;
   box-sizing: content-box;
+  content: url('../img/Rectangle-offers.svg');
   transition: margin-left .3s ease;
 }
 
-.section-offers__content-link:hover .content-link__svg {
+.section-offers__content-link:hover .content-link__more::after {
   margin-left: 20px;
 }
 
@@ -298,14 +306,19 @@ p {
 /* about us */
 
 .section-about__content {
+  width: 888px;
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 200%;
-  width: 888px;
-  margin: 0;
 }
 
 /*services */
+
+.section-services__list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .section-services__list-item {
   display: inline-block;
@@ -325,9 +338,7 @@ p {
 }
 
 .services__item-content {
-  padding-left: 45px;
-  padding-top: 26px;
-  padding-right: 126px;
+  padding: 26px 126px 35px 45px;
 }
 
 .services__content__link {
@@ -350,7 +361,6 @@ p {
 }
 
 .services__content__text {
-  margin-bottom: 35px;
   white-space: normal;
   font-weight: 400;
   font-size: 16px;
